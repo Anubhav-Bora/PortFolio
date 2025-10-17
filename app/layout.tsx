@@ -19,9 +19,9 @@ const sourceSans = Source_Sans_3({
 })
 
 export const metadata: Metadata = {
-  title: "Alex Johnson - Full Stack Developer",
+  title: "Anubhav Bora - Portfolio",
   description:
-    "Professional portfolio of Alex Johnson - Full Stack Developer specializing in React, Next.js, and AI technologies",
+    "Professional portfolio of Anubhav Bora - Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies",
   generator: "v0.app",
 }
 

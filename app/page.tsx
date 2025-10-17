@@ -34,8 +34,8 @@ export default function Home() {
         <AboutSection />
         <ProjectsSection />
         <ExperienceSection />
-        <ContactSection />
         <CertificatesSection />
+        <ContactSection />
         <Footer />
       </div>
     </main>
