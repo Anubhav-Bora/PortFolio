@@ -90,6 +90,18 @@ export const ContactSection = () => {
       color: "hover:text-orange-500",
     },
     {
+      icon: Code,
+      label: "Codeforces",
+      href: personalInfo.codeforces,
+      color: "hover:text-blue-500",
+    },
+    {
+      icon: Code,
+      label: "CodeChef",
+      href: personalInfo.codechef,
+      color: "hover:text-amber-700",
+    },
+    {
       icon: Twitter,
       label: "Twitter",
       href: personalInfo.twitter,

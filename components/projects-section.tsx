@@ -66,19 +66,28 @@ export const ProjectsSection = () => {
                     </div>
 
                     <div className="flex gap-2">
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="flex-1 bg-transparent"
-                        onClick={() => window.open(project.github, "_blank")}
-                      >
-                        <Github className="mr-2 h-4 w-4" />
-                        Code
-                      </Button>
-                      <Button size="sm" className="flex-1" onClick={() => window.open(project.live, "_blank")}>
-                        <ExternalLink className="mr-2 h-4 w-4" />
-                        Live Demo
-                      </Button>
+                      {project.github && (
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className={project.live ? "flex-1 bg-transparent" : "w-full bg-transparent"}
+                          onClick={() => window.open(project.github, "_blank")}
+                        >
+                          <Github className="mr-2 h-4 w-4" />
+                          Code
+                        </Button>
+                      )}
+                      {project.live && (
+                        <Button 
+                          size="sm" 
+                          className={project.github ? "flex-1" : "w-full"} 
+                          onClick={() => window.open(project.live, "_blank")}
+                          disabled={project.live === "Coming Soon"}
+                        >
+                          <ExternalLink className="mr-2 h-4 w-4" />
+                          {project.live === "Coming Soon" ? "Coming Soon" : "Live Demo"}
+                        </Button>
+                      )}
                     </div>
                   </CardContent>
                 </Card>

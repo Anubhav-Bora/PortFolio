@@ -1,124 +1,144 @@
 export const personalInfo = {
-  name: "Alex Johnson",
-  title: "Full Stack Developer | AI Enthusiast",
-  tagline: "Building scalable apps with AI and cloud technologies",
-  logo: "/logo.svg", // Logo representing Tech + Traveling + Fitness
-  profilePicture: "/professional-developer-headshot.png",
-  about:
-    "Passionate full-stack developer with 3+ years of experience building modern web applications. I love combining cutting-edge technology with creative problem-solving to deliver exceptional user experiences. When I'm not coding, you'll find me exploring new destinations or hitting the gym.",
+  name: "Anubhav Bora",
+  title: "Full Stack Developer | Problem Solver",
+  tagline: "Building scalable web applications with modern technologies",
+  logo: "/logo.svg",
+  profilePicture: "/professional-headshot.png",
+  about: "Passionate full-stack developer with experience building modern web applications using React, Next.js, Node.js, NestJS, and various databases. Strong problem-solving skills with expertise in algorithms and data structures. Currently pursuing B.Tech in Computer Science at Rashtriya Raksha University. Actively learning DevOps (Docker, CI/CD, AWS) to bridge development and deployment workflows.",
   resume: "/resume.pdf",
-  email: "alex.johnson@example.com",
-  phone: "+1-555-123-4567",
-  linkedin: "https://linkedin.com/in/alexjohnson",
-  github: "https://github.com/alexjohnson",
-  leetcode: "https://leetcode.com/alexjohnson",
-  twitter: "https://x.com/alexjohnson",
+  email: "anubhavbora40@gmail.com",
+  phone: "+91 8822090112",
+  linkedin: "https://linkedin.com/in/anubhav-bora",
+  github: "https://github.com/anubhavbora",
+  leetcode: "https://leetcode.com/anubhavbora",
+  codeforces: "https://codeforces.com/profile/anubhavbora",
+  codechef: "https://www.codechef.com/users/anubhavbora",
+  twitter: "https://x.com/anubhavbora",
 
   skills: [
     "React",
     "Next.js",
     "TypeScript",
     "Node.js",
+    "Express",
+    "NestJS",
+    "Hono",
     "Python",
+    "Go",
     "PostgreSQL",
     "MongoDB",
-    "AI/LLMs",
-    "TailwindCSS",
-    "AWS",
-    "Docker",
-    "GraphQL",
+    "Redis",
     "REST APIs",
+    "Prisma",
+    "Firebase",
     "Git",
+    "C++",
+    "Playwright",
+    "LLMs/AI",
+    "DevOps (Docker, CI/CD, AWS)",
+    "State Management (Redux, Recoil, Zustand)"
   ],
 
   experience: [
     {
-      company: "TechCorp Solutions",
-      role: "Full Stack Developer",
-      duration: "Jun 2023 - Present",
-      details:
-        "Led development of 3 major web applications using React and Node.js. Implemented AI-powered features that increased user engagement by 40%. Mentored 2 junior developers and established best practices for the team.",
+      company: "INA Internet Group",
+      role: "Full Stack Development Intern",
+      duration: "Jul 2024 - Oct 2024",
+      details: "Contributed to end-to-end development across the stack. Built responsive UIs using React.js and Next.js, integrated backend APIs, and worked with NestJS. Developed Redux actions, Epics, and Resolvers for state management. Integrated Google Maps API and wrote automated tests using Playwright (E2E) and Vest (form validation)."
     },
     {
-      company: "StartupXYZ",
-      role: "Frontend Developer Intern",
-      duration: "Jan 2023 - May 2023",
-      details:
-        "Built responsive web interfaces using React and TailwindCSS. Collaborated with design team to implement pixel-perfect UI components. Optimized application performance resulting in 25% faster load times.",
+      company: "Global Eye Intelligence",
+      role: "Development Intern",
+      duration: "Mar 2024 - May 2024",
+      details: "Developed MVP platform using Next.js, tRPC, Redis, and Zustand for state management. Architected content delivery pipelines, built interactive commenting systems with real-time updates using SSE, and created RESTful API endpoints. Developed a custom URL shortener in Go for internal analytics and link tracking."
     },
     {
-      company: "Freelance",
-      role: "Web Developer",
-      duration: "Sep 2022 - Dec 2022",
-      details:
-        "Developed custom websites for small businesses using modern web technologies. Delivered 5+ projects on time and within budget. Maintained ongoing client relationships and provided technical support.",
-    },
+      company: "Remote Pilot Training Program",
+      role: "Development Intern",
+      duration: "Jan 2024 - Mar 2024",
+      details: "Built a Learning Management System (LMS) for drone pilots using React, Express, and Prisma. Developed role-based UIs, RESTful APIs for course management and user authentication, and implemented database models using Prisma ORM. Used Recoil for state management."
+    }
   ],
 
   projects: [
     {
-      title: "AI-Powered Task Manager",
-      description:
-        "A smart task management app with AI suggestions and natural language processing. Built with Next.js, OpenAI API, and PostgreSQL.",
-      github: "https://github.com/alexjohnson/ai-task-manager",
-      live: "https://ai-task-manager.vercel.app",
-      image: "/projects/task-manager.png",
-      tech: ["Next.js", "OpenAI API", "PostgreSQL", "TailwindCSS"],
+      title: "Live AI Debate Arena",
+      description: "Real-time AI-driven debate platform with automated scoring, speech recognition, interactive video features, and gamified badges. Integrated real-time chat, leaderboards, and analytics for engaging user experience.",
+      live: "https://live-debate-ai.onrender.com/",
+      image: "/projects/debate-arena.png",
+      tech: ["React", "Node.js", "WebSockets", "Speech Recognition", "AI Analysis"]
     },
     {
-      title: "E-Commerce Platform",
-      description:
-        "Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard.",
-      github: "https://github.com/alexjohnson/ecommerce-platform",
-      live: "https://ecommerce-demo.vercel.app",
-      image: "/projects/ecommerce.png",
-      tech: ["React", "Node.js", "MongoDB", "Stripe API"],
+      title: "Blockchain Tourist Safety System",
+      description: "Tourist safety platform combining mobile app and admin dashboard. Enabled real-time alerts, map-based monitoring, and blockchain-secured communication via Ethereum smart contracts.",
+      github: "https://github.com/Neuro-Fox",
+      live: "https://drive.google.com/file/d/1dfxdZb8DagYL6ls-_xib0H1yVz1qlx9K/view?usp=sharing",
+      image: "/projects/blockchain-tourist.png",
+      tech: ["Ethereum", "Next.js", "React Native", "Blockchain", "React", "Maps API", "ML"]
     },
     {
-      title: "Weather Analytics Dashboard",
-      description: "Real-time weather data visualization with interactive charts and location-based forecasts.",
-      github: "https://github.com/alexjohnson/weather-dashboard",
-      live: "https://weather-analytics.vercel.app",
-      image: "/projects/weather.png",
-      tech: ["React", "D3.js", "Weather API", "Chart.js"],
+      title: "News Agent",
+      description: "Ongoing Agentic AI project to automatically fetch, summarize, and analyze news articles. Built using LLMs and vector databases for intelligent retrieval and context-aware summarization.",
+      github: "https://github.com/Anubhav-Bora/News-Agent",
+      live: "Coming Soon",
+      tech: ["Next.js", "Agentic AI", "LangChain", "GitHub Workflow"]
     },
+    {
+      title: "Subtitle Generator",
+      description: "Automated subtitle generation tool for videos using speech recognition and AI-based text synchronization. Helps in creating accurate captions quickly.",
+      github: "https://github.com/Anubhav-Bora/Subtitle-Generator",
+      tech: ["Python", "Speech Recognition", "FFmpeg", "AI/ML"]
+    },
+    {
+      title: "URL Shortener",
+      description: "Custom URL shortening service built using Go. Supports analytics and link tracking for optimized link management.",
+      github: "https://github.com/Anubhav-Bora/Shortner",
+      tech: ["Go", "PostgreSQL", "REST APIs"]
+    },
+    {
+      title: "Edusmart",
+      description: "Learning Management System for educational content with role-based access. Built to manage courses, quizzes, and student progress efficiently.",
+      github: "https://github.com/Anubhav-Bora/Edusmart",
+      tech: ["React", "Node.js", "Express", "Prisma"]
+    }
   ],
 
   certificates: [
     {
-      title: "AWS Certified Solutions Architect",
-      image: "/certificates/aws-sa.png",
-      description:
-        "Achieved in 2024, validating cloud architecture expertise and best practices for scalable applications.",
-      link: "https://verify.aws.example.com/certificate/12345",
-      issuer: "Amazon Web Services",
-      date: "March 2024",
+      title: "Internal SIH Qualifier",
+      image: "/certificates/sih-certificate.png",
+      description: "Led a team in the Smart India Hackathon, developing a MERN stack hospital management system that qualified for national level competition.",
+      link: "https://drive.google.com/file/d/1OFe_WuLuSbVnBXonC6tBNahW587mF1cR/view?usp=sharing",
+      issuer: "Smart India Hackathon",
+      date: "2023"
     },
     {
-      title: "Google Cloud Professional Developer",
-      image: "/certificates/gcp-dev.png",
-      description:
-        "Certified in developing scalable applications on Google Cloud Platform with modern DevOps practices.",
-      link: "https://verify.gcp.example.com/certificate/67890",
-      issuer: "Google Cloud",
-      date: "January 2024",
-    },
-    {
-      title: "Meta React Developer Certificate",
-      image: "/certificates/meta-react.png",
-      description:
-        "Comprehensive certification covering advanced React patterns, hooks, and modern development practices.",
-      link: "https://verify.meta.example.com/certificate/54321",
-      issuer: "Meta",
-      date: "November 2023",
-    },
-    {
-      title: "MongoDB Developer Certification",
-      image: "/certificates/mongodb.png",
-      description: "Expert-level certification in MongoDB database design, optimization, and application development.",
-      link: "https://verify.mongodb.example.com/certificate/98765",
-      issuer: "MongoDB University",
-      date: "September 2023",
-    },
+      title: "Full Stack Development Internship Certification",
+      image: "/certificates/fullstack-certificate.png",
+      description: "Certification in full stack web development covering React, Node.js, NestJS, databases, and modern development practices.",
+      link: "https://drive.google.com/file/d/1pbm2VCdqjTDj_C70pms8aoEztzvXvCwc/view?usp=sharing",
+      issuer: "Rashtriya Raksha University",
+      date: "2024"
+    }
   ],
-}
+
+  achievements: [
+    {
+      title: "Smart India Hackathon Team Leader",
+      description: "Guided a cross-functional team to develop a MERN stack hospital management system in 48 hours, qualifying for the national-level competition."
+    },
+    {
+      title: "Competitive Programmer",
+      description: "Solved 500+ questions across LeetCode, Codeforces, and CodeChef, demonstrating strong problem-solving and algorithmic skills."
+    }
+  ],
+
+  education: [
+    {
+      institution: "Rashtriya Raksha University",
+      degree: "B.Tech Computer Science and Engineering",
+      duration: "Aug 2023 - Present",
+      details: "Focus on web development, security best practices, and advanced algorithm design and implementation. CGPA: 7.6 | Current SGPA: 8.38"
+    }
+  ]
+};

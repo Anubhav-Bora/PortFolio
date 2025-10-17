@@ -1,38 +1,58 @@
 import { type NextRequest, NextResponse } from "next/server"
+import { sendThankYouEmail, sendNotificationEmail } from "@/lib/email"
 
 export async function POST(request: NextRequest) {
   try {
     const { name, email, subject, message } = await request.json()
 
-    console.log("[v0] Contact form submission:", { name, email, subject, message })
+    // Validate input
+    if (!name || !email || !subject || !message) {
+      return NextResponse.json(
+        {
+          success: false,
+          message: "All fields are required.",
+        },
+        { status: 400 },
+      )
+    }
 
-    // TODO: Integrate with email service like Resend, SendGrid, or Nodemailer
-    // Example with Resend:
-    // const resend = new Resend(process.env.RESEND_API_KEY)
-    // await resend.emails.send({
-    //   from: 'portfolio@yourdomain.com',
-    //   to: 'your-email@example.com',
-    //   subject: `Portfolio Contact: ${subject}`,
-    //   html: `
-    //     <h2>New Contact Form Submission</h2>
-    //     <p><strong>Name:</strong> ${name}</p>
-    //     <p><strong>Email:</strong> ${email}</p>
-    //     <p><strong>Subject:</strong> ${subject}</p>
-    //     <p><strong>Message:</strong></p>
-    //     <p>${message}</p>
-    //   `
-    // })
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(email)) {
+      return NextResponse.json(
+        {
+          success: false,
+          message: "Please provide a valid email address.",
+        },
+        { status: 400 },
+      )
+    }
+
+    console.log("[Contact Form] New submission:", { name, email, subject })
+
+    // Send thank you email to the sender
+    await sendThankYouEmail(name, email)
+    
+    // Send notification email to you with sender's details
+    await sendNotificationEmail(name, email, subject, message)
+
+    console.log("[Contact Form] Emails sent successfully")
 
     return NextResponse.json({
       success: true,
-      message: "Message received! I'll get back to you soon.",
+      message: "Message sent successfully! Check your email for confirmation.",
     })
   } catch (error) {
-    console.error("[v0] Contact form error:", error)
+    console.error("[Contact Form] Error:", error)
+    
+    // Provide more specific error message
+    const errorMessage = error instanceof Error ? error.message : "Unknown error occurred"
+    
     return NextResponse.json(
       {
         success: false,
-        message: "Failed to send message. Please try again.",
+        message: "Failed to send message. Please try emailing me directly at anubhavbora40@gmail.com",
+        error: process.env.NODE_ENV === "development" ? errorMessage : undefined,
       },
       { status: 500 },
     )
