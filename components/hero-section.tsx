@@ -37,82 +37,7 @@ export const HeroSection = () => {
         <Logo />
       </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 1, duration: 0.8 }}
-        className="fixed left-6 top-1/2 transform -translate-y-1/2 z-50 flex flex-col space-y-6"
-      >
-        <motion.a
-          href={personalInfo.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          whileHover={{ scale: 1.1, x: 5 }}
-          className="text-slate-500 hover:text-white transition-all duration-300"
-          title="GitHub"
-        >
-          <Github className="w-5 h-5" />
-        </motion.a>
-        <motion.a
-          href={personalInfo.linkedin}
-          target="_blank"
-          rel="noopener noreferrer"
-          whileHover={{ scale: 1.1, x: 5 }}
-          className="text-slate-500 hover:text-blue-400 transition-all duration-300"
-          title="LinkedIn"
-        >
-          <Linkedin className="w-5 h-5" />
-        </motion.a>
-        <motion.a
-          href={personalInfo.leetcode}
-          target="_blank"
-          rel="noopener noreferrer"
-          whileHover={{ scale: 1.1, x: 5 }}
-          className="text-slate-500 hover:text-orange-400 transition-all duration-300"
-          title="LeetCode"
-        >
-          <Code2 className="w-5 h-5" />
-        </motion.a>
-        <motion.a
-          href={personalInfo.codeforces}
-          target="_blank"
-          rel="noopener noreferrer"
-          whileHover={{ scale: 1.1, x: 5 }}
-          className="text-slate-500 hover:text-blue-500 transition-all duration-300"
-          title="Codeforces"
-        >
-          <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M4.5 7.5C5.328 7.5 6 8.172 6 9v10.5c0 .828-.672 1.5-1.5 1.5S3 20.328 3 19.5V9c0-.828.672-1.5 1.5-1.5zm9-4.5c.828 0 1.5.672 1.5 1.5v15c0 .828-.672 1.5-1.5 1.5S12 20.328 12 19.5v-15c0-.828.672-1.5 1.5-1.5zm-4.5 9c.828 0 1.5.672 1.5 1.5v6c0 .828-.672 1.5-1.5 1.5S7.5 20.328 7.5 19.5v-6c0-.828.672-1.5 1.5-1.5zm9-7.5c.828 0 1.5.672 1.5 1.5v13.5c0 .828-.672 1.5-1.5 1.5S16.5 20.328 16.5 19.5V6c0-.828.672-1.5 1.5-1.5z"/>
-          </svg>
-        </motion.a>
-        <motion.a
-          href={personalInfo.codechef}
-          target="_blank"
-          rel="noopener noreferrer"
-          whileHover={{ scale: 1.1, x: 5 }}
-          className="text-slate-500 hover:text-brown-400 transition-all duration-300"
-          title="CodeChef"
-        >
-          <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M11.257.004c-.37.01-.735.043-1.097.099-.736.119-1.453.33-2.136.627C5.49 1.723 3.21 3.671 1.8 6.18c-.785 1.394-1.291 2.945-1.472 4.548-.091.804-.09 1.617-.003 2.422.181 1.67.731 3.264 1.598 4.656.866 1.391 2.05 2.565 3.444 3.417 1.393.852 2.977 1.37 4.61 1.503.822.067 1.65.052 2.468-.046 1.616-.194 3.178-.743 4.56-1.596 1.382-.853 2.573-2.026 3.47-3.411.896-1.385 1.485-2.967 1.712-4.605.113-.822.135-1.654.066-2.48-.138-1.644-.652-3.238-1.495-4.652-.843-1.413-1.998-2.632-3.36-3.555-1.362-.924-2.922-1.54-4.549-1.795-.542-.085-1.09-.13-1.64-.127l-.252.001-.25.004zm-.257 2.005c.37-.003.738.022 1.104.074 1.375.196 2.698.725 3.847 1.537 1.148.812 2.119 1.896 2.824 3.15.706 1.254 1.138 2.659 1.256 4.104.06.722.044 1.45-.045 2.168-.176 1.426-.681 2.802-1.469 4.003-.788 1.202-1.844 2.215-3.072 2.95-1.227.735-2.61 1.183-4.03 1.301-.71.059-1.425.046-2.13-.039-1.404-.171-2.76-.665-3.95-1.436-1.19-.771-2.201-1.807-2.946-3.016-.746-1.209-1.216-2.575-1.368-3.99-.076-.707-.07-1.421.016-2.124.171-1.401.665-2.753 1.436-3.939.77-1.187 1.806-2.196 3.013-2.939 1.207-.743 2.571-1.21 3.983-1.36.354-.038.71-.056 1.065-.059l.233-.002.233.017z"/>
-          </svg>
-        </motion.a>
-        <motion.a
-          href={personalInfo.twitter}
-          target="_blank"
-          rel="noopener noreferrer"
-          whileHover={{ scale: 1.1, x: 5 }}
-          className="text-slate-500 hover:text-white transition-all duration-300"
-          title="Twitter/X"
-        >
-          <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-          </svg>
-        </motion.a>
-        <div className="w-px h-20 bg-slate-700 mx-auto"></div>
-      </motion.div>
-
-      <div className="container mx-auto px-6 text-left relative z-10 max-w-6xl ml-20">
+      <div className="container mx-auto px-6 text-left relative z-10 max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -144,30 +69,80 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.8 }}
-            className="max-w-lg space-y-6"
+            className="max-w-2xl space-y-6"
           >
-            <p className="text-lg text-slate-400 leading-relaxed">{personalInfo.about}</p>
+            <p className="text-lg text-slate-400 leading-relaxed italic">
+              "Passionate about technology, fitness, travel, and exploring new things — I build, learn, and grow every day."
+            </p>
 
-            <div className="flex flex-wrap gap-4 pt-4">
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-black transition-all duration-300 bg-transparent"
-                onClick={() => window.open(personalInfo.linkedin, "_blank")}
+            {/* Social Links */}
+            <div className="flex flex-wrap gap-3 pt-4">
+              <motion.a
+                href={personalInfo.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                className="p-3 rounded-lg bg-slate-800/50 hover:bg-slate-700/50 text-slate-400 hover:text-white transition-all duration-300 border border-slate-700/50 hover:border-slate-600"
+                title="GitHub"
               >
-                <Linkedin className="mr-2 h-4 w-4" />
-                Connect on LinkedIn
-              </Button>
-
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-black transition-all duration-300 bg-transparent"
-                onClick={() => window.open(personalInfo.leetcode, "_blank")}
+                <Github className="w-5 h-5" />
+              </motion.a>
+              <motion.a
+                href={personalInfo.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                className="p-3 rounded-lg bg-slate-800/50 hover:bg-blue-500/10 text-slate-400 hover:text-blue-400 transition-all duration-300 border border-slate-700/50 hover:border-blue-500/50"
+                title="LinkedIn"
               >
-                <Code2 className="mr-2 h-4 w-4" />
-                LeetCode Profile
-              </Button>
+                <Linkedin className="w-5 h-5" />
+              </motion.a>
+              <motion.a
+                href={personalInfo.leetcode}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                className="p-3 rounded-lg bg-slate-800/50 hover:bg-orange-500/10 text-slate-400 hover:text-orange-400 transition-all duration-300 border border-slate-700/50 hover:border-orange-500/50"
+                title="LeetCode"
+              >
+                <Code2 className="w-5 h-5" />
+              </motion.a>
+              <motion.a
+                href={personalInfo.codeforces}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                className="p-3 rounded-lg bg-slate-800/50 hover:bg-blue-500/10 text-slate-400 hover:text-blue-500 transition-all duration-300 border border-slate-700/50 hover:border-blue-500/50"
+                title="Codeforces"
+              >
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M4.5 7.5C5.328 7.5 6 8.172 6 9v10.5c0 .828-.672 1.5-1.5 1.5S3 20.328 3 19.5V9c0-.828.672-1.5 1.5-1.5zm9-4.5c.828 0 1.5.672 1.5 1.5v15c0 .828-.672 1.5-1.5 1.5S12 20.328 12 19.5v-15c0-.828.672-1.5 1.5-1.5zm-4.5 9c.828 0 1.5.672 1.5 1.5v6c0 .828-.672 1.5-1.5 1.5S7.5 20.328 7.5 19.5v-6c0-.828.672-1.5 1.5-1.5zm9-7.5c.828 0 1.5.672 1.5 1.5v13.5c0 .828-.672 1.5-1.5 1.5S16.5 20.328 16.5 19.5V6c0-.828.672-1.5 1.5-1.5z"/>
+                </svg>
+              </motion.a>
+              <motion.a
+                href={personalInfo.codechef}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                className="p-3 rounded-lg bg-slate-800/50 hover:bg-amber-500/10 text-slate-400 hover:text-amber-600 transition-all duration-300 border border-slate-700/50 hover:border-amber-600/50"
+                title="CodeChef"
+              >
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M11.257.004c-.37.01-.735.043-1.097.099-.736.119-1.453.33-2.136.627C5.49 1.723 3.21 3.671 1.8 6.18c-.785 1.394-1.291 2.945-1.472 4.548-.091.804-.09 1.617-.003 2.422.181 1.67.731 3.264 1.598 4.656.866 1.391 2.05 2.565 3.444 3.417 1.393.852 2.977 1.37 4.61 1.503.822.067 1.65.052 2.468-.046 1.616-.194 3.178-.743 4.56-1.596 1.382-.853 2.573-2.026 3.47-3.411.896-1.385 1.485-2.967 1.712-4.605.113-.822.135-1.654.066-2.48-.138-1.644-.652-3.238-1.495-4.652-.843-1.413-1.998-2.632-3.36-3.555-1.362-.924-2.922-1.54-4.549-1.795-.542-.085-1.09-.13-1.64-.127l-.252.001-.25.004zm-.257 2.005c.37-.003.738.022 1.104.074 1.375.196 2.698.725 3.847 1.537 1.148.812 2.119 1.896 2.824 3.15.706 1.254 1.138 2.659 1.256 4.104.06.722.044 1.45-.045 2.168-.176 1.426-.681 2.802-1.469 4.003-.788 1.202-1.844 2.215-3.072 2.95-1.227.735-2.61 1.183-4.03 1.301-.71.059-1.425.046-2.13-.039-1.404-.171-2.76-.665-3.95-1.436-1.19-.771-2.201-1.807-2.946-3.016-.746-1.209-1.216-2.575-1.368-3.99-.076-.707-.07-1.421.016-2.124.171-1.401.665-2.753 1.436-3.939.77-1.187 1.806-2.196 3.013-2.939 1.207-.743 2.571-1.21 3.983-1.36.354-.038.71-.056 1.065-.059l.233-.002.233.017z"/>
+                </svg>
+              </motion.a>
+              <motion.a
+                href={personalInfo.twitter}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                className="p-3 rounded-lg bg-slate-800/50 hover:bg-slate-700/50 text-slate-400 hover:text-white transition-all duration-300 border border-slate-700/50 hover:border-slate-600"
+                title="Twitter/X"
+              >
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </motion.a>
             </div>
           </motion.div>
 
