@@ -43,14 +43,6 @@ export const ProjectsSection = () => {
                 className="h-full"
               >
                 <Card className="h-full flex flex-col hover:shadow-lg transition-all duration-300">
-                  <div className="aspect-video bg-gradient-to-br from-primary/10 to-primary/5 rounded-t-lg flex items-center justify-center">
-                    <img
-                      src={`/abstract-geometric-shapes.png?height=200&width=300&query=${project.title} project screenshot`}
-                      alt={project.title}
-                      className="w-full h-full object-cover rounded-t-lg"
-                    />
-                  </div>
-
                   <CardHeader className="flex-grow">
                     <CardTitle className="text-xl">{project.title}</CardTitle>
                     <p className="text-muted-foreground leading-relaxed">{project.description}</p>
