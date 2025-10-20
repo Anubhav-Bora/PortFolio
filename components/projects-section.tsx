@@ -56,7 +56,7 @@ export const ProjectsSection = () => {
                         </Badge>
                       ))}
                     </div>
-
+1
                     <div className="flex gap-2">
                       {project.github && (
                         <Button

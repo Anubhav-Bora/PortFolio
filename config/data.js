@@ -8,11 +8,11 @@ export const personalInfo = {
   resume: "/resume.pdf",
   email: "anubhavbora40@gmail.com",
   phone: "+91 8822090112",
-  linkedin: "https://linkedin.com/in/anubhav-bora",
-  github: "https://github.com/anubhavbora",
-  leetcode: "https://leetcode.com/anubhavbora",
-  codeforces: "https://codeforces.com/profile/anubhavbora",
-  codechef: "https://www.codechef.com/users/anubhavbora",
+  linkedin: "https://www.linkedin.com/in/anubhav-bora-349b1027a",
+  github: "https://github.com/Anubhav-Bora",
+  leetcode: "https://leetcode.com/u/Anubhav-Bora/",
+  codeforces: "https://www.codechef.com/users/anubhavbora40",
+  codechef: "https://www.codechef.com/users/anubhavbora40",
   twitter: "https://x.com/anubhavbora",
 
   skills: [
