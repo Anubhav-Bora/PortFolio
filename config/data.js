@@ -78,10 +78,10 @@ export const personalInfo = {
     },
     {
       title: "News Agent",
-      description: "Ongoing Agentic AI project to automatically fetch, summarize, and analyze news articles. Built using LLMs and vector databases for intelligent retrieval and context-aware summarization.",
+      description: "An AI-powered news aggregation platform built with Next.js that curates personalized news digests with sentiment analysis, multi-language translation, and multi-format delivery (text, audio, PDF) powered by LangChain and Google Generative AI. Engineered end-to-end features including intelligent feed collection, email distribution, and user interest tracking with Supabase authentication.",
       github: "https://github.com/Anubhav-Bora/News-Agent",
-      live: "Coming Soon",
-      tech: ["Next.js", "Agentic AI", "LangChain", "GitHub Workflow"]
+      live: "https://news-agent-snowy-eight.vercel.app/",
+      tech: ["Next.js", "Agentic AI", "LangChain", "Google Generative AI", "Supabase", "Email Distribution", "Multi-language", "Audio/PDF"]
     },
     {
       title: "Subtitle Generator",
