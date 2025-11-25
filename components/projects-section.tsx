@@ -57,26 +57,26 @@ export const ProjectsSection = () => {
                       ))}
                     </div>
                     <div className="flex gap-2">
-                      {project.github && (
+                      {project.source && (
                         <Button
                           variant="outline"
                           size="sm"
-                          className={project.live ? "flex-1 bg-transparent" : "w-full bg-transparent"}
-                          onClick={() => window.open(project.github, "_blank")}
+                          className={project.demo ? "flex-1 bg-transparent" : "w-full bg-transparent"}
+                          onClick={() => window.open(project.source, "_blank")}
                         >
                           <Github className="mr-2 h-4 w-4" />
                           Code
                         </Button>
                       )}
-                      {project.live && (
+                      {project.demo && (
                         <Button 
                           size="sm" 
-                          className={project.github ? "flex-1" : "w-full"} 
-                          onClick={() => window.open(project.live, "_blank")}
-                          disabled={project.live === "Coming Soon"}
+                          className={project.source ? "flex-1" : "w-full"} 
+                          onClick={() => window.open(project.demo, "_blank")}
+                          disabled={project.demo === "Coming Soon"}
                         >
                           <ExternalLink className="mr-2 h-4 w-4" />
-                          {project.live === "Coming Soon" ? "Coming Soon" : "Live Demo"}
+                          {project.demo === "Coming Soon" ? "Coming Soon" : "Live Demo"}
                         </Button>
                       )}
                     </div>
