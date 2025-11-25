@@ -100,6 +100,13 @@ export const personalInfo = {
       description: "Learning Management System for educational content with role-based access. Built to manage courses, quizzes, and student progress efficiently.",
       github: "https://github.com/Anubhav-Bora/Edusmart",
       tech: ["React", "Node.js", "Express", "Prisma"]
+    },
+    {
+      title: "YouTube Chatbot",
+      description: "An interactive chatbot that allows users to input a YouTube link and ask questions related to the video content. The bot processes the video and provides relevant answers.",
+      demo: "https://youtube-chat-bot-opal.vercel.app/",
+      source: "https://github.com/Anubhav-Bora/YoutubeChatBot",
+      technologies: ["Next.js", "TypeScript", "Gemini API", "Vercel"],
     }
   ],
 
@@ -142,3 +149,28 @@ export const personalInfo = {
     }
   ]
 };
+
+const techStack = {
+  frontend: [
+    "Next.js 15 - React framework with App Router",
+    "React 18 - UI library",
+    "TypeScript - Type-safe JavaScript",
+    "Tailwind CSS - Utility-first CSS framework",
+    "Custom Animations - CSS transitions and keyframes",
+  ],
+  aiAndMachineLearning: [
+    "Google Gemini 2.0 Flash - Latest LLM for question answering",
+    "LangChain.js - AI orchestration framework",
+    "RAG (Retrieval-Augmented Generation) - Advanced AI architecture",
+    "Vector Embeddings - Text-embedding-004 model",
+    "Semantic Search - Vector similarity search",
+  ],
+  backendAndApis: [
+    "Next.js API Routes - Serverless functions",
+    "YouTubei.js - YouTube data extraction",
+    "Memory Vector Store - In-memory vector database",
+    "Session Management - Custom session handling",
+  ],
+};
+
+export default techStack;
