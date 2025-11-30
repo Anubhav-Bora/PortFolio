@@ -57,6 +57,13 @@ export const personalInfo = {
       role: "Development Intern",
       duration: "Jan 2024 - Mar 2024",
       details: "Built a Learning Management System (LMS) for drone pilots using React, Express, and Prisma. Developed role-based UIs, RESTful APIs for course management and user authentication, and implemented database models using Prisma ORM. Used Recoil for state management."
+    },
+    {
+      company: "Internship Experience Certificate",
+      role: "Intern",
+      duration: "Certificate Issued",
+      details: "Received internship experience certificate for successful completion of internship duties.",
+      certificate: "https://drive.google.com/file/d/1Savuh0N9zVEfqIO4j0A2h5CSM6Y09hyv/view?usp=sharing"
     }
   ],
 
