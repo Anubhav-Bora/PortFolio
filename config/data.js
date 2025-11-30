@@ -134,6 +134,15 @@ export const personalInfo = {
       issuer: "Rashtriya Raksha University",
       date: "2024"
     }
+    ,
+    {
+      title: "Internship Experience Certificate",
+      image: "/certificates/internship-certificate.png",
+      description: "Internship completion certificate for successful completion of internship duties.",
+      link: "https://drive.google.com/file/d/1Savuh0N9zVEfqIO4j0A2h5CSM6Y09hyv/view?usp=sharing",
+      issuer: "INA Internet Group",
+      date: "2024"
+    }
   ],
 
   achievements: [
