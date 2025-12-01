@@ -36,7 +36,9 @@ export const personalInfo = {
     "Playwright",
     "LLMs/AI",
     "DevOps (Docker, CI/CD, AWS)",
-    "State Management (Redux, Recoil, Zustand)"
+    "State Management (Redux, Recoil, Zustand)",
+    "LangChain",
+    "LangGraph"
   ],
 
   experience: [
@@ -177,6 +179,7 @@ const techStack = {
   aiAndMachineLearning: [
     "Google Gemini 2.0 Flash - Latest LLM for question answering",
     "LangChain.js - AI orchestration framework",
+    "LangGraph - AI workflow graphs",
     "RAG (Retrieval-Augmented Generation) - Advanced AI architecture",
     "Vector Embeddings - Text-embedding-004 model",
     "Semantic Search - Vector similarity search",

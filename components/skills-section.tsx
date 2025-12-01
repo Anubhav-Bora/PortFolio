@@ -52,6 +52,16 @@ export const SkillsSection = () => {
                 </Badge>
               </motion.div>
             ))}
+            {/* Add LangChain, LangGraph, and GEN AI visually if not present in skills array */}
+            {!personalInfo.skills.includes("LangChain") && (
+              <Badge variant="secondary" className="px-4 py-2 text-sm font-medium bg-primary/10 text-primary hover:bg-primary/20 transition-colors">LangChain</Badge>
+            )}
+            {!personalInfo.skills.includes("LangGraph") && (
+              <Badge variant="secondary" className="px-4 py-2 text-sm font-medium bg-primary/10 text-primary hover:bg-primary/20 transition-colors">LangGraph</Badge>
+            )}
+            {!personalInfo.skills.includes("GEN AI") && (
+              <Badge variant="secondary" className="px-4 py-2 text-sm font-medium bg-primary/10 text-primary hover:bg-primary/20 transition-colors">GEN AI</Badge>
+            )}
           </motion.div>
         </motion.div>
       </div>
