@@ -57,26 +57,27 @@ export const ProjectsSection = () => {
                       ))}
                     </div>
                     <div className="flex gap-2">
-                      {project.source && (
+                      {/* Support all possible link keys for each project */}
+                      {(project.source || project.github) && (
                         <Button
                           variant="outline"
                           size="sm"
-                          className={project.demo ? "flex-1 bg-transparent" : "w-full bg-transparent"}
-                          onClick={() => window.open(project.source, "_blank")}
+                          className={(project.demo || project.live) ? "flex-1 bg-transparent" : "w-full bg-transparent"}
+                          onClick={() => window.open(project.source || project.github, "_blank")}
                         >
                           <Github className="mr-2 h-4 w-4" />
                           Code
                         </Button>
                       )}
-                      {project.demo && (
+                      {(project.demo || project.live) && (
                         <Button 
                           size="sm" 
-                          className={project.source ? "flex-1" : "w-full"} 
-                          onClick={() => window.open(project.demo, "_blank")}
-                          disabled={project.demo === "Coming Soon"}
+                          className={(project.source || project.github) ? "flex-1" : "w-full"} 
+                          onClick={() => window.open(project.demo || project.live, "_blank")}
+                          disabled={(project.demo || project.live) === "Coming Soon"}
                         >
                           <ExternalLink className="mr-2 h-4 w-4" />
-                          {project.demo === "Coming Soon" ? "Coming Soon" : "Live Demo"}
+                          {(project.demo || project.live) === "Coming Soon" ? "Coming Soon" : "Live Demo"}
                         </Button>
                       )}
                     </div>
