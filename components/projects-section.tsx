@@ -57,27 +57,27 @@ export const ProjectsSection = () => {
                       ))}
                     </div>
                     <div className="flex gap-2">
-                      {/* Support all possible link keys for each project */}
-                      {(project.source || project.github) && (
+                      {/* Show code and live demo links for all projects, supporting both key sets */}
+                      {project.github && (
                         <Button
                           variant="outline"
                           size="sm"
-                          className={(project.demo || project.live) ? "flex-1 bg-transparent" : "w-full bg-transparent"}
-                          onClick={() => window.open(project.source || project.github, "_blank")}
+                          className={project.live ? "flex-1 bg-transparent" : "w-full bg-transparent"}
+                          onClick={() => window.open(project.github, "_blank")}
                         >
                           <Github className="mr-2 h-4 w-4" />
                           Code
                         </Button>
                       )}
-                      {(project.demo || project.live) && (
+                      {project.live && (
                         <Button 
                           size="sm" 
-                          className={(project.source || project.github) ? "flex-1" : "w-full"} 
-                          onClick={() => window.open(project.demo || project.live, "_blank")}
-                          disabled={(project.demo || project.live) === "Coming Soon"}
+                          className={project.github ? "flex-1" : "w-full"} 
+                          onClick={() => window.open(project.live, "_blank")}
+                          disabled={project.live === "Coming Soon"}
                         >
                           <ExternalLink className="mr-2 h-4 w-4" />
-                          {(project.demo || project.live) === "Coming Soon" ? "Coming Soon" : "Live Demo"}
+                          {project.live === "Coming Soon" ? "Coming Soon" : "Live Demo"}
                         </Button>
                       )}
                     </div>

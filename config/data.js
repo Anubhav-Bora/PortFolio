@@ -113,9 +113,9 @@ export const personalInfo = {
     {
       title: "YouTube Chatbot",
       description: "An interactive chatbot that allows users to input a YouTube link and ask questions related to the video content. The bot processes the video and provides relevant answers.",
-      demo: "https://youtube-chat-bot-opal.vercel.app/",
-      source: "https://github.com/Anubhav-Bora/YoutubeChatBot",
-      technologies: ["Next.js", "TypeScript", "Gemini API", "Vercel"],
+      live: "https://youtube-chat-bot-opal.vercel.app/",
+      github: "https://github.com/Anubhav-Bora/YoutubeChatBot",
+      tech: ["Next.js", "TypeScript", "Gemini API", "Vercel"],
     }
   ],
 
