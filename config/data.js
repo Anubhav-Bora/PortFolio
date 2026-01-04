@@ -116,6 +116,12 @@ export const personalInfo = {
       live: "https://youtube-chat-bot-opal.vercel.app/",
       github: "https://github.com/Anubhav-Bora/YoutubeChatBot",
       tech: ["Next.js", "TypeScript", "Gemini API", "Vercel"],
+    },
+    {
+      title: "Multiplayer Chat-Room",
+      description: "A real-time multiplayer chat room application enabling seamless communication between users with instant messaging capabilities.",
+      github: "https://github.com/Anubhav-Bora/MultiPlayer-Chat-Room",
+      tech: ["WebSockets", "Real-time Communication"],
     }
   ],
 
