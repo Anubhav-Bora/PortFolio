@@ -71,6 +71,13 @@ export const personalInfo = {
 
   projects: [
     {
+      title: "OpsTrack",
+      description: "A comprehensive operations tracking and management platform designed to streamline workflow monitoring, task management, and team collaboration. Features real-time updates, analytics dashboard, and user authentication for secure access control.",
+      live: "https://ops-frontend-amber.vercel.app/login",
+      github: "https://github.com/Anubhav-Bora/OpsTrack",
+      tech: ["Next.js", "TypeScript", "Authentication", "Real-time Updates", "Analytics"]
+    },
+    {
       title: "Live AI Debate Arena",
       description: "Real-time AI-driven debate platform with automated scoring, speech recognition, interactive video features, and gamified badges. Integrated real-time chat, leaderboards, and analytics for engaging user experience.",
       live: "https://live-debate-ai.onrender.com/",
