@@ -72,10 +72,10 @@ export const personalInfo = {
   projects: [
     {
       title: "OpsTrack",
-      description: "A comprehensive operations tracking and management platform designed to streamline workflow monitoring, task management, and team collaboration. Features real-time updates, analytics dashboard, and user authentication for secure access control.",
+      description: "Engineered a full-stack task management platform enabling teams to organize work into rooms, assign role-based tasks, track dependencies, and manage approvals. Leveraged React, TypeScript, TanStack Query for server state management, Node.js, Express, Prisma, and PostgreSQL with serverless deployment on Vercel.",
       live: "https://ops-frontend-amber.vercel.app/login",
       github: "https://github.com/Anubhav-Bora/OpsTrack",
-      tech: ["Next.js", "TypeScript", "Authentication", "Real-time Updates", "Analytics"]
+      tech: ["React", "TypeScript", "TanStack Query", "Node.js", "Express", "Prisma", "PostgreSQL", "Vercel"]
     },
     {
       title: "Live AI Debate Arena",
