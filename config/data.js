@@ -71,6 +71,12 @@ export const personalInfo = {
 
   projects: [
     {
+      title: "WebShield",
+      description: "Secure webhook platform with real-time monitoring and attack simulation. Implemented JWT authentication, HMAC verification, and rate limiting for strong security. Developed using FastAPI backend and Next.js frontend with a live analytics dashboard for real-time insights and threat detection.",
+      github: "https://github.com/Anubhav-Bora/WebShield",
+      tech: ["FastAPI", "Next.js", "JWT", "HMAC", "Rate Limiting", "Real-time Monitoring", "Analytics Dashboard", "Security"]
+    },
+    {
       title: "OpsTrack",
       description: "Engineered a full-stack task management platform enabling teams to organize work into rooms, assign role-based tasks, track dependencies, and manage approvals. Leveraged React, TypeScript, TanStack Query for server state management, Node.js, Express, Prisma, and PostgreSQL with serverless deployment on Vercel.",
       live: "https://ops-frontend-amber.vercel.app/login",
