@@ -154,15 +154,18 @@ export const personalInfo = {
       link: "https://drive.google.com/file/d/1pbm2VCdqjTDj_C70pms8aoEztzvXvCwc/view?usp=sharing",
       issuer: "Rashtriya Raksha University",
       date: "2024"
-    }
-    ,
+    },
     {
-      title: "Internship Experience Certificate",
-      image: "/certificates/internship-certificate.png",
-      description: "Internship completion certificate for successful completion of internship duties.",
-      link: "https://drive.google.com/file/d/1Savuh0N9zVEfqIO4j0A2h5CSM6Y09hyv/view?usp=sharing",
-      issuer: "INA Internet Group",
-      date: "2024"
+      title: "GenAI - Prompt Engineering and Intro to AI Agent Micro Certification",
+      link: "https://pwc.tekstac.com/blocks/tekbadges/badge.php?id=3435",
+      issuer: "Tekstac",
+      date: "2026"
+    },
+    {
+      title: "Modern Data Systems Micro Certification",
+      link: "https://pwc.tekstac.com/blocks/tekbadges/badge.php?id=3435",
+      issuer: "Tekstac",
+      date: "2026"
     }
   ],
 

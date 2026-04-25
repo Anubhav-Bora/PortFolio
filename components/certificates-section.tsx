@@ -45,9 +45,6 @@ export const CertificatesSection = () => {
                       <p className="text-xs text-muted-foreground mt-1">
                         {cert.issuer} • {cert.date}
                       </p>
-                      {cert.image && (
-                        <img src={cert.image} alt={cert.title} className="mt-2 w-32 h-20 object-contain rounded shadow" />
-                      )}
                       <p className="text-xs text-muted-foreground mt-1">{cert.description}</p>
                     </div>
                     <button
