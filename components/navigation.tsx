@@ -1,58 +1,97 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { useEffect, useState } from "react"
+import { Menu, X } from "lucide-react"
+import { Logo } from "@/components/logo"
+import { ThemeToggle } from "@/components/theme-toggle"
 import { personalInfo } from "@/config/data"
-import { Logo } from "./logo"
+
+const navItems = [
+  { name: "About", href: "#about" },
+  { name: "Work", href: "#projects" },
+  { name: "Experience", href: "#experience" },
+  { name: "Contact", href: "#contact" },
+]
 
 export const Navigation = () => {
-  const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "Experience", href: "#experience" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
-  ]
+  const [isOpen, setIsOpen] = useState(false)
+
+  useEffect(() => {
+    const closeMenu = () => setIsOpen(false)
+    window.addEventListener("resize", closeMenu)
+    return () => window.removeEventListener("resize", closeMenu)
+  }, [])
 
   return (
-    <motion.nav
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-slate-800/50"
-    >
-      <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <Logo />
+    <>
+      <a
+        href="#main-content"
+        className="fixed left-4 top-3 z-[60] -translate-y-20 rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-transform focus:translate-y-0"
+      >
+        Skip to content
+      </a>
 
-        <div className="hidden md:flex items-center space-x-8">
-          {navItems.map((item, index) => (
-            <motion.a
-              key={item.name}
-              href={item.href}
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 + 0.3 }}
-              className="text-slate-400 hover:text-white transition-colors duration-300 text-sm font-light tracking-wider uppercase"
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-border/70 bg-background/88 backdrop-blur-xl">
+        <div className="page-shell flex h-18 items-center justify-between">
+          <a href="#home" className="flex items-center gap-3" aria-label="Go to top">
+            <Logo />
+            <span className="hidden text-sm font-semibold tracking-[-0.01em] sm:block">{personalInfo.name}</span>
+          </a>
+
+          <nav className="hidden items-center gap-7 md:flex" aria-label="Main navigation">
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              >
+                {item.name}
+              </a>
+            ))}
+          </nav>
+
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <a
+              href={`mailto:${personalInfo.email}`}
+              className="hidden rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5 sm:inline-flex"
             >
-              {item.name}
-            </motion.a>
-          ))}
+              Let&apos;s talk
+            </a>
+            <button
+              type="button"
+              onClick={() => setIsOpen((open) => !open)}
+              className="inline-flex size-9 items-center justify-center rounded-full border border-border text-foreground md:hidden"
+              aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={isOpen}
+              aria-controls="mobile-navigation"
+            >
+              {isOpen ? <X className="size-4" /> : <Menu className="size-4" />}
+            </button>
+          </div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.5 }}
-          className="w-8 h-8 rounded-full bg-gradient-to-r from-emerald-400 to-cyan-400"
-        >
-          <div className="w-full h-full rounded-full bg-black/20 flex items-center justify-center">
-            <span className="text-xs font-bold text-black">
-              {personalInfo.name
-                .split(" ")
-                .map((n) => n[0])
-                .join("")}
-            </span>
-          </div>
-        </motion.div>
-      </div>
-    </motion.nav>
+        {isOpen && (
+          <nav
+            id="mobile-navigation"
+            className="border-t border-border bg-background px-5 py-5 md:hidden"
+            aria-label="Mobile navigation"
+          >
+            <div className="mx-auto flex max-w-7xl flex-col">
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className="border-b border-border py-3 text-base font-medium last:border-0"
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
+          </nav>
+        )}
+      </header>
+    </>
   )
 }

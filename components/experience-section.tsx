@@ -1,95 +1,68 @@
 "use client"
 
-import { motion } from "framer-motion"
-import { useInView } from "framer-motion"
+import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Building, Calendar } from "lucide-react"
+import { BriefcaseBusiness } from "lucide-react"
 import { personalInfo } from "@/config/data"
+import { SectionHeading } from "@/components/section-heading"
 
 export const ExperienceSection = () => {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
-
-  const cardRef0 = useRef(null)
-  const cardRef1 = useRef(null)
-  const cardRef2 = useRef(null)
-  const cardRef3 = useRef(null)
-  const cardRef4 = useRef(null)
-
-  const cardInView0 = useInView(cardRef0, { once: true, margin: "-50px" })
-  const cardInView1 = useInView(cardRef1, { once: true, margin: "-50px" })
-  const cardInView2 = useInView(cardRef2, { once: true, margin: "-50px" })
-  const cardInView3 = useInView(cardRef3, { once: true, margin: "-50px" })
-  const cardInView4 = useInView(cardRef4, { once: true, margin: "-50px" })
-
-  const cardRefs = [cardRef0, cardRef1, cardRef2, cardRef3, cardRef4]
-  const cardInViews = [cardInView0, cardInView1, cardInView2, cardInView3, cardInView4]
+  const isInView = useInView(ref, { once: true, margin: "-80px" })
 
   return (
-    <section id="experience" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto"
-        >
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-3xl md:text-4xl font-bold text-center mb-16"
-          >
-            Experience
-          </motion.h2>
+    <section id="experience" className="section-pad bg-card">
+      <motion.div
+        ref={ref}
+        initial={{ opacity: 0, y: 24 }}
+        animate={isInView ? { opacity: 1, y: 0 } : undefined}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        className="page-shell"
+      >
+        <SectionHeading
+          eyebrow="Experience"
+          title="Learning by building in real environments."
+          description="Hands-on roles across secure software, production web applications, real-time systems, and learning platforms."
+        />
 
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-primary/20 via-primary to-primary/20"></div>
+        <div className="mt-16 border-t border-border">
+          {personalInfo.experience.map((experience, index) => {
+            const isCurrent = experience.duration.includes("Present")
 
-            <div className="space-y-16">
-              {personalInfo.experience.map((exp, index) => (
-                <motion.div
-                  key={index}
-                  ref={cardRefs[index]}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100, y: 50 }}
-                  animate={
-                    cardInViews[index]
-                      ? { opacity: 1, x: 0, y: 0 }
-                      : { opacity: 0, x: index % 2 === 0 ? -100 : 100, y: 50 }
-                  }
-                  transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
-                  className={`relative flex ${index % 2 === 0 ? "justify-start" : "justify-end"}`}
-                >
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background shadow-lg z-10"></div>
+            return (
+              <motion.article
+                key={`${experience.company}-${experience.role}`}
+                initial={{ opacity: 0, y: 18 }}
+                animate={isInView ? { opacity: 1, y: 0 } : undefined}
+                transition={{ delay: index * 0.08, duration: 0.45 }}
+                className="grid gap-5 border-b border-border py-8 sm:grid-cols-[9rem_1fr] lg:grid-cols-[12rem_0.8fr_1.2fr] lg:gap-10 lg:py-10"
+              >
+                <div>
+                  <p className="font-mono text-xs text-muted-foreground">{experience.duration}</p>
+                  {isCurrent && (
+                    <span className="mt-3 inline-flex items-center gap-2 rounded-full bg-brand-soft px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-foreground">
+                      <span className="size-1.5 rounded-full bg-brand" />
+                      Current
+                    </span>
+                  )}
+                </div>
 
-                  <div className={`w-full max-w-md ${index % 2 === 0 ? "mr-auto pr-8" : "ml-auto pl-8"}`}>
-                    <Card className="hover:shadow-xl transition-all duration-500 hover:scale-105 bg-background/80 backdrop-blur-sm border-2 border-primary/20">
-                      <CardHeader className="text-center">
-                        <div className="flex flex-col items-center gap-3">
-                          <div className="p-2 bg-primary/10 rounded-full">
-                            <Building className="h-6 w-6 text-primary" />
-                          </div>
-                          <CardTitle className="text-xl font-bold">{exp.company}</CardTitle>
-                          <p className="text-lg font-semibold text-primary">{exp.role}</p>
-                          <div className="flex items-center gap-2 text-muted-foreground">
-                            <Calendar className="h-4 w-4" />
-                            <span className="text-sm font-medium">{exp.duration}</span>
-                          </div>
-                        </div>
-                      </CardHeader>
-                      <CardContent className="text-center">
-                        <p className="text-muted-foreground leading-relaxed">{exp.details}</p>
-                      </CardContent>
-                    </Card>
+                <div>
+                  <div className="mb-3 flex size-9 items-center justify-center rounded-full border border-border bg-background lg:hidden">
+                    <BriefcaseBusiness className="size-4" />
                   </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
-      </div>
+                  <h3 className="font-serif text-2xl leading-tight">{experience.role}</h3>
+                  <p className="mt-2 text-sm font-semibold text-brand">{experience.company}</p>
+                </div>
+
+                <p className="text-[15px] leading-7 text-muted-foreground sm:col-start-2 lg:col-start-auto">
+                  {experience.details}
+                </p>
+              </motion.article>
+            )
+          })}
+        </div>
+      </motion.div>
     </section>
   )
 }

@@ -19,10 +19,9 @@ const sourceSans = Source_Sans_3({
 })
 
 export const metadata: Metadata = {
-  title: "Anubhav Bora - Portfolio",
+  title: "Anubhav Bora — Full Stack Developer",
   description:
-    "Professional portfolio of Anubhav Bora - Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies",
-  generator: "v0.app",
+    "Portfolio of Anubhav Bora, a full stack developer building secure, reliable web products with React, Next.js, Node.js, and modern backend systems.",
 }
 
 export default function RootLayout({
@@ -33,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${sourceSans.variable} antialiased`} suppressHydrationWarning>
       <body className="font-sans bg-background text-foreground">
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>
       </body>

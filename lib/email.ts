@@ -1,7 +1,14 @@
 import { Resend } from "resend"
 
-// Initialize Resend with API key
-const resend = new Resend(process.env.RESEND_API_KEY)
+const getResendClient = () => {
+  const apiKey = process.env.RESEND_API_KEY
+
+  if (!apiKey) {
+    throw new Error("RESEND_API_KEY is not configured.")
+  }
+
+  return new Resend(apiKey)
+}
 
 // Professional thank you email template for the sender
 export const getThankYouEmailTemplate = (name: string) => `
@@ -200,6 +207,8 @@ export const getNotificationEmailTemplate = (name: string, email: string, subjec
 
 // Function to send thank you email to the sender
 export async function sendThankYouEmail(name: string, email: string) {
+  const resend = getResendClient()
+
   await resend.emails.send({
     from: "Anubhav Bora <onboarding@resend.dev>", // Use your verified domain later
     to: email,
@@ -210,6 +219,8 @@ export async function sendThankYouEmail(name: string, email: string) {
 
 // Function to send notification email to you
 export async function sendNotificationEmail(name: string, email: string, subject: string, message: string) {
+  const resend = getResendClient()
+
   await resend.emails.send({
     from: "Portfolio Contact Form <onboarding@resend.dev>", // Use your verified domain later
     to: "anubhavbora40@gmail.com",

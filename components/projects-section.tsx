@@ -1,93 +1,102 @@
 "use client"
 
-import { motion } from "framer-motion"
-import { useInView } from "framer-motion"
-import { useRef } from "react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Github, ExternalLink } from "lucide-react"
+import { motion, useInView } from "framer-motion"
+import { useRef, useState } from "react"
+import { ArrowUpRight, Github, Minus, Plus } from "lucide-react"
 import { personalInfo } from "@/config/data"
+import { SectionHeading } from "@/components/section-heading"
+
+const INITIAL_PROJECT_COUNT = 6
 
 export const ProjectsSection = () => {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const isInView = useInView(ref, { once: true, margin: "-80px" })
+  const [showAll, setShowAll] = useState(false)
+  const projects = showAll ? personalInfo.projects : personalInfo.projects.slice(0, INITIAL_PROJECT_COUNT)
 
   return (
-    <section id="projects" className="py-20">
-      <div className="container mx-auto px-4">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-6xl mx-auto"
-        >
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-3xl md:text-4xl font-bold text-center mb-12"
-          >
-            Featured Projects
-          </motion.h2>
+    <section id="projects" className="section-pad border-y border-border">
+      <motion.div
+        ref={ref}
+        initial={{ opacity: 0, y: 24 }}
+        animate={isInView ? { opacity: 1, y: 0 } : undefined}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        className="page-shell"
+      >
+        <SectionHeading
+          eyebrow="Selected work"
+          title="Products built to solve real problems."
+          description="A selection of full stack, security, real-time, and AI-enabled projects—from university platforms to developer tools."
+        />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {personalInfo.projects.map((project, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                transition={{ delay: 0.2 * index, duration: 0.6 }}
-                whileHover={{ y: -5 }}
-                className="h-full"
-              >
-                <Card className="h-full flex flex-col hover:shadow-lg transition-all duration-300">
-                  <CardHeader className="flex-grow">
-                    <CardTitle className="text-xl">{project.title}</CardTitle>
-                    <p className="text-muted-foreground leading-relaxed">{project.description}</p>
-                  </CardHeader>
+        <div className="mt-16 grid gap-px overflow-hidden rounded-xl border border-border bg-border md:grid-cols-2">
+          {projects.map((project, index) => (
+            <article
+              key={project.title}
+              className="group flex min-h-[390px] flex-col bg-card p-6 transition-colors hover:bg-background sm:p-8"
+            >
+              <div className="flex items-start justify-between gap-5">
+                <span className="font-mono text-xs text-muted-foreground">{String(index + 1).padStart(2, "0")}</span>
+                {index === 0 && (
+                  <span className="rounded-full bg-brand-soft px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-foreground">
+                    Latest addition
+                  </span>
+                )}
+              </div>
 
-                  <CardContent className="pt-0">
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.tech?.map((tech) => (
-                        <Badge key={tech} variant="outline" className="text-xs">
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
-                    <div className="flex gap-2">
-                      {/* Show code and live demo links for all projects, supporting both key sets */}
-                      {project.github && (
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className={project.live ? "flex-1 bg-transparent" : "w-full bg-transparent"}
-                          onClick={() => window.open(project.github, "_blank")}
-                        >
-                          <Github className="mr-2 h-4 w-4" />
-                          Code
-                        </Button>
-                      )}
-                      {project.live && (
-                        <Button 
-                          size="sm" 
-                          className={project.github ? "flex-1" : "w-full"} 
-                          onClick={() => window.open(project.live, "_blank")}
-                          disabled={project.live === "Coming Soon"}
-                        >
-                          <ExternalLink className="mr-2 h-4 w-4" />
-                          {project.live === "Coming Soon" ? "Coming Soon" : "Live Demo"}
-                        </Button>
-                      )}
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
+              <h3 className="mt-10 font-serif text-3xl leading-tight tracking-[-0.035em]">{project.title}</h3>
+              <p className="mt-5 line-clamp-4 text-[15px] leading-7 text-muted-foreground">{project.description}</p>
+
+              <ul className="mt-7 flex flex-wrap gap-x-4 gap-y-2" aria-label={`${project.title} technologies`}>
+                {project.tech?.slice(0, 6).map((tech) => (
+                  <li key={tech} className="text-xs font-medium text-foreground/70">
+                    {tech}
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-auto flex items-center gap-5 border-t border-border pt-6">
+                {project.live && project.live !== "Coming Soon" && (
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group/link inline-flex items-center gap-2 text-sm font-semibold"
+                  >
+                    View project
+                    <ArrowUpRight className="size-4 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
+                  </a>
+                )}
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    <Github className="size-4" />
+                    Source
+                  </a>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+
+        {personalInfo.projects.length > INITIAL_PROJECT_COUNT && (
+          <div className="mt-8 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setShowAll((current) => !current)}
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-semibold transition-colors hover:border-foreground/30"
+              aria-expanded={showAll}
+            >
+              {showAll ? <Minus className="size-4" /> : <Plus className="size-4" />}
+              {showAll ? "Show selected projects" : `View all ${personalInfo.projects.length} projects`}
+            </button>
           </div>
-        </motion.div>
-      </div>
+        )}
+      </motion.div>
     </section>
   )
 }

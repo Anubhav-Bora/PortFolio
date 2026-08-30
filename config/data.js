@@ -1,10 +1,10 @@
 export const personalInfo = {
   name: "Anubhav Bora",
-  title: "Full Stack Developer | Problem Solver",
-  tagline: "Building scalable web applications with modern technologies",
+  title: "Full Stack Developer | Cybersecurity Enthusiast",
+  tagline: "Building secure, scalable digital experiences for real-world problems",
   logo: "/logo.svg",
   profilePicture: "/professional-headshot.png",
-  about: "Passionate full-stack developer with experience building modern web applications using React, Next.js, Node.js, NestJS, and various databases. Strong problem-solving skills with expertise in algorithms and data structures. Currently pursuing B.Tech in Computer Science at Rashtriya Raksha University. Actively learning DevOps (Docker, CI/CD, AWS) to bridge development and deployment workflows.",
+  about: "I am a full-stack developer focused on building reliable, secure, and user-centric web experiences. My work spans React, Next.js, Node.js, and backend systems, with a growing focus on cybersecurity, system hardening, and modern web architecture. I am currently pursuing B.Tech in Computer Science at Rashtriya Raksha University and enjoy translating product ideas into polished, practical solutions.",
   resume: "/resume.pdf",
   email: "anubhavbora40@gmail.com",
   phone: "+91 8822090112",
@@ -14,27 +14,26 @@ export const personalInfo = {
   codeforces: "https://www.codechef.com/users/anubhavbora40",
   codechef: "https://www.codechef.com/users/anubhavbora40",
   twitter: "https://x.com/anubhavbora",
+  medium: "https://medium.com/@anubhavbora40",
 
   skills: [
     "React",
     "Next.js",
     "TypeScript",
+    "JavaScript",
     "Node.js",
     "Express",
-    "NestJS",
     "Hono",
+    "FastAPI",
     "Python",
-    "Go",
     "PostgreSQL",
     "MongoDB",
     "Redis",
-    "REST APIs",
     "Prisma",
     "Firebase",
     "Git",
     "C++",
-    "Playwright",
-    "LLMs/AI",
+    "GENAI",
     "DevOps (Docker, CI/CD, AWS)",
     "State Management (Redux, Recoil, Zustand)",
     "LangChain",
@@ -42,6 +41,12 @@ export const personalInfo = {
   ],
 
   experience: [
+    {
+      company: "Central Intelligence Organization",
+      role: "Cybersecurity & Software Development Intern",
+      duration: "Jun 2025 – Present",
+      details: "Developing secure software solutions and supporting cybersecurity operations, including vulnerability assessment, security monitoring, and access management."
+    },
     {
       company: "INA Internet Group",
       role: "Full Stack Development Intern",
@@ -63,6 +68,12 @@ export const personalInfo = {
   ],
 
   projects: [
+    {
+      title: "University Website & CMS",
+      description: "Contributed to the official Rashtriya Raksha University website using React.js and Next.js, working with CMS workflows, APIs, authentication, and web application architecture.",
+      live: "https://rru.ac.in/",
+      tech: ["React.js", "Next.js", "CMS", "REST APIs", "Authentication", "Web Architecture"]
+    },
     {
       title: "WebShield",
       description: "Secure webhook platform with real-time monitoring and attack simulation. Implemented JWT authentication, HMAC verification, and rate limiting for strong security. Developed using FastAPI backend and Next.js frontend with a live analytics dashboard for real-time insights and threat detection.",
@@ -133,6 +144,20 @@ export const personalInfo = {
 
   certificates: [
     {
+      title: "Top 10 — CTF Heaven Competition",
+      description: "Ranked in the top 10 among 300+ participating teams in the CTF Heaven cybersecurity competition.",
+      link: "https://drive.google.com/file/d/1nXy_CWhm7fZCz8ruJYO0Ap_C4ndClJdt/view?usp=sharing",
+      issuer: "CTF Heaven",
+      date: "Top 10 of 300+ teams"
+    },
+    {
+      title: "Short-Term GRC Course Completion",
+      description: "Completed a short-term course in Governance, Risk, and Compliance (GRC).",
+      link: "https://drive.google.com/file/d/1YL1evMnmYP2tIeNBegLRknSUeoMz3OK9/view?usp=sharing",
+      issuer: "Governance, Risk & Compliance",
+      date: "Short-term course"
+    },
+    {
       title: "Internal SIH Qualifier",
       image: "/certificates/sih-certificate.png",
       description: "Led a team in the Smart India Hackathon, developing a MERN stack hospital management system that qualified for national level competition.",
@@ -149,13 +174,8 @@ export const personalInfo = {
       date: "2024"
     },
     {
-      title: "GenAI - Prompt Engineering and Intro to AI Agent Micro Certification",
-      link: "https://pwc.tekstac.com/blocks/tekbadges/badge.php?id=3435",
-      issuer: "Tekstac",
-      date: "2026"
-    },
-    {
-      title: "Modern Data Systems Micro Certification",
+      title: "Professional Micro-Certifications",
+      description: "Soft Skills, GenAI, Cyber, Data & Tech Risk, PowerShell, and Modern Data Systems.",
       link: "https://pwc.tekstac.com/blocks/tekbadges/badge.php?id=3435",
       issuer: "Tekstac",
       date: "2026"
@@ -178,7 +198,7 @@ export const personalInfo = {
       institution: "Rashtriya Raksha University",
       degree: "B.Tech Computer Science and Engineering",
       duration: "Aug 2023 - Present",
-      details: "Focus on web development, security best practices, and advanced algorithm design and implementation. CGPA: 7.6 | Current SGPA: 8.38"
+      details: "Focus on web development, security best practices, and advanced algorithm design and implementation. CGPA: 7.8 | Current SGPA: 8.8"
     }
   ]
 };
