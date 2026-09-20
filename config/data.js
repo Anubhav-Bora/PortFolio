@@ -69,6 +69,12 @@ export const personalInfo = {
 
   projects: [
     {
+      title: "ThreatMesh",
+      description: "ThreatMesh is a cybersecurity threat-intelligence platform that collects and normalizes public threat feeds, enriches IOCs, and helps analysts investigate relationships between malicious indicators. It uses MITRE ATT&CK mapping, graph-based campaign analysis, explainable risk scoring, and AI-assisted reporting to turn raw threat data into actionable, evidence-backed insights.",
+      live: "https://threat-mesh.vercel.app/",
+      tech: ["Cybersecurity", "Threat Intelligence", "MITRE ATT&CK", "Graph Analysis", "AI Reporting", "IOC Enrichment", "Risk Scoring"]
+    },
+    {
       title: "University Website & CMS",
       description: "Contributed to the official Rashtriya Raksha University website using React.js and Next.js, working with CMS workflows, APIs, authentication, and web application architecture.",
       live: "https://rru.ac.in/",
