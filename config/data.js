@@ -127,25 +127,7 @@ export const personalInfo = {
       github: "https://github.com/Anubhav-Bora/Shortner",
       tech: ["Go", "PostgreSQL", "REST APIs"]
     },
-    {
-      title: "Edusmart",
-      description: "Learning Management System for educational content with role-based access. Built to manage courses, quizzes, and student progress efficiently.",
-      github: "https://github.com/Anubhav-Bora/Edusmart",
-      tech: ["React", "Node.js", "Express", "Prisma"]
-    },
-    {
-      title: "YouTube Chatbot",
-      description: "An interactive chatbot that allows users to input a YouTube link and ask questions related to the video content. The bot processes the video and provides relevant answers.",
-      live: "https://youtube-chat-bot-opal.vercel.app/",
-      github: "https://github.com/Anubhav-Bora/YoutubeChatBot",
-      tech: ["Next.js", "TypeScript", "Gemini API", "Vercel"],
-    },
-    {
-      title: "Multiplayer Chat-Room",
-      description: "A real-time multiplayer chat room application enabling seamless communication between users with instant messaging capabilities.",
-      github: "https://github.com/Anubhav-Bora/MultiPlayer-Chat-Room",
-      tech: ["WebSockets", "Real-time Communication"],
-    }
+
   ],
 
   certificates: [
