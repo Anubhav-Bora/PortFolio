@@ -45,6 +45,13 @@ export const AboutSection = () => {
                 </div>
               ))}
             </div>
+
+            <div className="mt-10">
+              <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">Beyond Tech</h3>
+              <p className="mt-3 text-sm leading-7 text-muted-foreground">
+                Outside of tech, I enjoy staying active through running, gym workouts, and sports like football, badminton, and swimming.
+              </p>
+            </div>
           </div>
 
           <aside className="h-fit rounded-xl border border-border bg-background p-6 sm:p-8">
