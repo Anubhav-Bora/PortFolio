@@ -27,7 +27,7 @@ export const HeroSection = () => {
               Full stack development · Cybersecurity
             </div>
 
-            <h1 className="max-w-5xl font-serif text-[clamp(2.8rem,6.5vw,6rem)] leading-[0.9] tracking-[-0.055em]">
+            <h1 className="font-serif text-[clamp(2.8rem,6.5vw,6rem)] leading-[0.9] tracking-[-0.055em]">
               Building for the web,
               <span className="block italic text-brand">with security in mind.</span>
             </h1>
@@ -85,11 +85,7 @@ export const HeroSection = () => {
               Supporting secure software delivery, vulnerability assessment, monitoring, and access management.
             </p>
 
-            <dl className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-border bg-border">
-              <div className="bg-card p-4">
-                <dt className="text-xs text-muted-foreground">Problems solved</dt>
-                <dd className="mt-1 font-serif text-2xl">500+</dd>
-              </div>
+            <dl className="mt-8 overflow-hidden rounded-lg border border-border">
               <div className="bg-card p-4">
                 <dt className="text-xs text-muted-foreground">Core focus</dt>
                 <dd className="mt-1 font-serif text-2xl">Secure web</dd>
