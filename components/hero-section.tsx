@@ -27,7 +27,7 @@ export const HeroSection = () => {
               Full stack development · Cybersecurity
             </div>
 
-            <h1 className="max-w-5xl font-serif text-[clamp(3.7rem,9vw,8.2rem)] leading-[0.88] tracking-[-0.065em]">
+            <h1 className="max-w-5xl font-serif text-[clamp(2.8rem,6.5vw,6rem)] leading-[0.9] tracking-[-0.055em]">
               Building for the web,
               <span className="block italic text-brand">with security in mind.</span>
             </h1>
